@@ -1,0 +1,16 @@
+<h1>Here are all regions.</h1>
+<ul>
+  <% @regions.each do |region| %>
+  <li>
+    <p><%= link_to region.name, region_path(region) %></p>
+    <p><%= link_to 'Edit Region', edit_region_path(region)%>
+    <%= link_to "Delete", region_path(region),
+                                     :data => {:confirm => "Are you sure?",
+                                                    :method => "delete"} %>
+    </p>
+  </li>
+  <% end %>
+</ul>
+
+<hr>
+<%= link_to "New Region", new_region_path %>
