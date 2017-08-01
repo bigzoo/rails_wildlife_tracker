@@ -6,6 +6,8 @@
 <ul>
   <% @animal.sightings.each do |sighting| %>
   <li>
+    <%= sighting.region.name %>
+    |
     <%= sighting.date %>
     |
     <%= sighting.latitude %>
