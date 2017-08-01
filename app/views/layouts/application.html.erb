@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WildlifeTracker</title>
+    <title>Wildlife Tracker</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +11,10 @@
   <body>
     <%= flash[:alert] %>
     <%= flash[:notice] %>
+    <nav>
+      <li><%= link_to "Home Page", '/' %></li>
+      <li><%= link_to "Regions Page", regions_path %></li>
+    </nav>
     <%= yield %>
   </body>
 </html>
