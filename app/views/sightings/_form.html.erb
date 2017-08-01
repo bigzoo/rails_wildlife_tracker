@@ -8,5 +8,11 @@
 <%= f.text_field :longitude %>
 <%= f.label :latitude %>
 <%= f.text_field :latitude %>
-<%= f.submit %>
+<%= f.label :region %>
+
+<%= f.select(:region_id) do %>
+  <% Region.all.each do |r| %>
+    <%= content_tag(:option, r.name, value: r.id) %>
+  <% end %>
+<% end %><%= f.submit %>
 <% end %>
