@@ -1,0 +1,19 @@
+<h1>The <%= @region.name%> region.</h1>
+<hr>
+<% if @region.sightings.any? %>
+<h2>Sightings in <%=@region.name%></h2>
+<ul>
+  <% @region.sightings.each do |sighting| %>
+  <li>
+    <%= sighting.animal.name %>
+    |
+    <%= sighting.date %>
+    |
+    <%= sighting.latitude %>
+    |
+    <%= sighting.longitude %>
+  </li>
+  <% end %>
+</ul>
+<%else%>
+<%end%>
