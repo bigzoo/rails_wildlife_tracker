@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :animals do
     resources :sightings
   end
+  resources :regions
   root 'animals#index'
 end
